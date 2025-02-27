@@ -26,7 +26,7 @@ public class Deck{
             {
                 currentSuit = Utility.getSuits()[i];
                 currentRank = Utility.getSuits()[j];
-                cards.add(new Card(currentSuit, currentRank));
+                cards.add(new Card(currentSuit, currentRank);
             }
         }
     }
