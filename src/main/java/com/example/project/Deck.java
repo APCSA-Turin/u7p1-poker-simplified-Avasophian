@@ -15,8 +15,20 @@ public class Deck{
         return cards;
     }
 
-    public  void initializeDeck(){ //hint.. use the utility class
-        
+    public  void initializeDeck()
+    { //hint.. use the utility class
+        String currentRank = "";
+        String currentSuit = "";
+
+        for (int i = 0; i < Utility.getSuits().length; i++)
+        {
+            for (int j = 0; j < Utility.getRanks().length; i++)
+            {
+                currentSuit = Utility.getSuits()[i];
+                currentRank = Utility.getSuits()[j];
+                cards.add(new Card(currentSuit, currentRank));
+            }
+        }
     }
 
     public  void shuffleDeck(){ //You can use the Collections library or another method. You do not have to create your own shuffle algorithm
@@ -31,7 +43,15 @@ public class Deck{
         return cards.isEmpty();
     }
 
-   
+    public static void main(String[] args) 
+    {
+        Deck d = new Deck();
+        d.initializeDeck();
+        for (Card c : d.getCards())
+        {
+            System.out.println(c.getRank() + " " + c.getSuit());
+        }
+    }
 
 
 }
