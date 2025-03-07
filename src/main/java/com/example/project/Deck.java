@@ -22,11 +22,11 @@ public class Deck{
 
         for (int i = 0; i < Utility.getSuits().length; i++)
         {
-            for (int j = 0; j < Utility.getRanks().length; i++)
+            for (int j = 0; j < Utility.getRanks().length; j++)
             {
                 currentSuit = Utility.getSuits()[i];
-                currentRank = Utility.getSuits()[j];
-                cards.add(new Card(currentSuit, currentRank);
+                currentRank = Utility.getRanks()[j];
+                cards.add(new Card(currentRank, currentSuit));
             }
         }
     }
@@ -46,11 +46,10 @@ public class Deck{
     public static void main(String[] args) 
     {
         Deck d = new Deck();
-        d.initializeDeck();
-        for (Card c : d.getCards())
-        {
-            System.out.println(c.getRank() + " " + c.getSuit());
-        }
+        // for (Card c : d.getCards())
+        // {
+        //     System.out.println(c.getRank() + " " + c.getSuit());
+        // }
     }
 
 
